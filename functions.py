@@ -30,3 +30,23 @@ print("result1: ", result1)
 
 result2 = greeting("Bob")
 print("result2: ", result2)
+
+
+print("=========Keyword & deafult argumentsL===========")
+
+
+def give_greet(name, age=22):  # define vaqtida default value bersak buladi
+    print("give_great is executed")
+    return f"Hello {name}, your age is {age}"
+
+
+# result3 = give_greet("ALEX", 22)
+# print("result3: ", result3)
+
+
+# kod yanada tushunarli bulishi uchun keyword berish kk bu yerda name bilan age keywoardlar
+result3 = give_greet(name="ALEX", age=22)
+print("result3: ", result3)
+
+result4 = give_greet(name="ALEX",)
+print("result3: ", result4)
