@@ -1,7 +1,7 @@
 '''FUNCTIONS
 (1) DEFINE vs CALL
 (2) Parametr vs Argument
-(3) Keyword & deafult arguments
+(3) Keyword & default arguments
 (4) Scope
 '''
 
@@ -32,7 +32,7 @@ result2 = greeting("Bob")
 print("result2: ", result2)
 
 
-print("=========Keyword & deafult argumentsL===========")
+print("=========Keyword & default arguments===========")
 
 
 def give_greet(name, age=22):  # define vaqtida default value bersak buladi
@@ -50,3 +50,16 @@ print("result3: ", result3)
 
 result4 = give_greet(name="ALEX",)
 print("result3: ", result4)
+
+print("========= Scope ===========")
+
+b = 100  # 3
+
+
+def calculate(a, b):  # 2
+    c = a + b  # 1
+    print(f"c value is: {c}")
+
+
+calculate(5, 55)
+calculate(5, b)
