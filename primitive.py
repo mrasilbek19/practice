@@ -33,3 +33,24 @@ result = course.replace("Mern", "Python")
 print(f"result 4 is: {result}")
 
 # print(course)
+
+print("=============== BOOLEAN =================")
+
+# functions > type(), input(), bool(), int(), str()
+
+y = input("Input value of y: ")
+print(f"Value of y: {y}")
+
+
+result = y.isnumeric()
+print(f"Input number is numeric: {result}")
+
+# TRUTHY: True, 100, -1, "nimadir"
+# FALSY: False, 0, "", None
+
+
+test_falsy = "" or False or None or 0
+print("test_falsy:", bool(test_falsy))
+
+test_truthy = "100"
+print("test_truthy", bool(test_truthy))
