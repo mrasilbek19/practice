@@ -38,14 +38,18 @@ car_obj = dict(name="Toyota", year=2026, electric=True)
 
 try:
     print("Passed here")
-    x = car_obj.speed
+    # x = car_obj.speed
     result = car_obj["origin"]
     # result = car_obj["name"]
     print(result)
-except KeyError as err:
-    print("origin state didn't found: ", err)
-except KeyError as err:
-    print("speed state not found", err)
+# except KeyError as err:
+#     print("origin state didn't found: ", err)
+# except AttributeError as err:
+#     print("speed state not found", err)
+# except (KeyError, AttributeError) as err:
+#     print("Error: ", err)
+except Exception as err:  # error type qiziq bolmasa
+    print("General Error: ", err)
 else:
     print("Executed succesfully without any errors")
 finally:
