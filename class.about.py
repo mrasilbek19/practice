@@ -50,3 +50,50 @@ print(new_message)
 
 # static methods
 Person.explain()
+
+
+# web sitedan keraklisini topib ishlatsa buladi
+print("===== special/magic methods =======")
+
+# most used special methods:
+# __init__, __new__, __str__, __call__, __getitem__, __eq__, __len__ .....
+
+
+class Car():
+    # state
+    description = "This class makes cars"
+
+    # constructor
+    def __new__(cls, *args):
+        print("------__new__ -----")
+        return super().__new__(cls)
+
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
+
+    # method
+    def start_engine(self):
+        print(f"{self.name} started Engine")
+
+    def stop_engine(self):
+        print(f"{self.name} stoped Engine")
+
+    def __str__(self):
+        return f"{self.name} was produced in {self.year}"
+
+    def __call__(self):
+        print("Object called as function")
+        return True
+
+
+car1 = Car("Bmw", 2022)
+car1.start_engine()
+car1.stop_engine()
+
+
+print("------------------------")
+car2 = Car("KIA", 2024)
+print(car2)
+responce = car2()
+print(responce)
