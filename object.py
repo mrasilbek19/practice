@@ -31,3 +31,22 @@ print("result1:", result1)
 
 result2 = ceil(34.3)
 print("result2:", result2)
+
+
+print("===== (4) Error handling systems =====")
+car_obj = dict(name="Toyota", year=2026, electric=True)
+
+try:
+    print("Passed here")
+    x = car_obj.speed
+    result = car_obj["origin"]
+    # result = car_obj["name"]
+    print(result)
+except KeyError as err:
+    print("origin state didn't found: ", err)
+except KeyError as err:
+    print("speed state not found", err)
+else:
+    print("Executed succesfully without any errors")
+finally:
+    print("Finally block is executed")
