@@ -2,7 +2,7 @@ print("===== Iterable objects & RANGE =====")
 
 # Iterable objects > string, dict, tuple, list, range, map, filter
 
-range_obj = range(5)  # (0, 5)
+range_obj = range(5)  # [0, 5)
 print("range_obj:", range_obj)
 
 text = "MIT"

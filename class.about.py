@@ -92,7 +92,7 @@ car1.start_engine()
 car1.stop_engine()
 
 
-print("------------------------")
+print("1----------------------1")
 car2 = Car("KIA", 2024)
 print(car2)
 responce = car2()
