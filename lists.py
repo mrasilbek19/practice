@@ -2,7 +2,7 @@
 (1) Working with lists
 (2) List methods
 (3) Lubmda functions
-(4) enumarate, map and filter
+(4) enumerate, map and filter
 '''
 
 print("===== Working with lists ======")
@@ -98,3 +98,69 @@ print("sorted list (reversed)", x)
 y = [25, 4, 3, 18, 77]
 new_y = sorted(y)
 print(f"original array: {y} sorted array: {new_y}")
+
+print("===== Lubmda functions ======")
+# labmda is small anonymous functions
+def calculate(x, y): return x * y
+
+
+result = calculate(3, 6)
+print(result)
+
+people = [
+    ("Robert", 20),
+    ("Nick", 33),
+    ("Bob", 26),
+    ("Alex", 22)
+]
+people.sort()
+print("People(1):", people)
+
+# sort via labmda
+people.sort(key=lambda person: person[1])
+print("People(2):", people)
+
+print("===== enumerate, map and filter ======")
+animals = ["dog", "cat", "fish"]
+for element in enumerate(animals):
+    print("element", element)
+
+print("--------")
+for (index, value) in enumerate(animals):
+    print(f"the index: {index} and value: {value}")
+
+
+# similar in dictionary
+car_obj = dict(brand="BMW", year=2022)
+result = car_obj.items()
+print("result:", result)
+for (key, value) in result:
+    print(f"the key: {key} and value: {value}")
+
+
+print("--------")
+cars = [
+    ("Ferrari", 78),
+    ("Tayota", 87),
+    ("Audi", 116),
+    ("BMw", 109),
+    ("Pagani", 33)
+]
+
+# ananaviy method
+new_cars = []
+for car in cars:
+    new_cars.append(car[0])
+print("new_car(1):", new_cars)
+
+# map
+result_map = map(lambda car: car[0], cars)
+print(f"the result: {result_map} and type: {type(result_map)}")
+new_cars = list(result_map)
+print("new_cars(2)", new_cars)
+
+print("--------")
+# filter
+result_filter = filter(lambda car: car[1] > 80, cars)
+print(f"the result_filter:{result_filter} and type: {type(result_filter)}")
+print(list(result_filter))
