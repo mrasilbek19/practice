@@ -83,3 +83,16 @@ def greeting(*args, **kwargs):
 
 
 greeting("hi", True,  10, name="Alex", age=22)
+
+
+print("===== zip ======")
+tuple1 = (1, 2, 3, 4, 5)
+tuple2 = ('a', 'b', 'c', 'd')
+
+zipped = zip(tuple1, tuple2)
+print("zipped", zipped)
+
+'''list bir hil indexdagi valuelarni olib tuple qilib arrayga joylab 
+berar ekan agar indexlar soni farq qilsa kickkna indexligigacha ishlaydi'''
+result = list(zipped)
+print(result)
