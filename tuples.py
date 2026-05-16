@@ -32,3 +32,36 @@ print(animals)
 
 # animals[0] = "tiger"  # --> TypeError buladi
 # print(animals)
+
+
+# tupleni shunaqa yozsaham bular ekanu lekin yozmagan maqul--> Avoid this
+people = "Alex", "Bob"
+animal = "dog",
+
+print("===== Unpacking arguments ======")
+groups = ["MIT", "FLEXY", "DEVEX", "MG"]
+(x, y, z, a) = groups  # har bir element varibalelarga yoyib qoydik
+(x, y, *z) = groups
+# yoyib berish bu yerda 2 ta oldingini uzini olib va qolgan boshqalarni bitta variablega quy dedik
+
+print(f"the x is {x} and y is {y}")
+print(z)  # list
+
+# *args > tuple
+
+
+def calculate(*args):
+    print("args >", args)
+    total = 1
+    for x in args:
+        total *= x
+    print(f"the type(args) value: {type(args)}")
+    print(f"the total value: {total}")
+
+
+# CALL
+calculate(1, 7, 2, 9)
+print("--------------")
+calculate(0, 9, 4)
+print("--------------")
+calculate(2, 9)
