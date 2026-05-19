@@ -5,6 +5,7 @@
 '''
 
 
+from PIL import Image
 import turtle
 print("===== Python Packages and Core Package =====")
 
@@ -33,3 +34,14 @@ with open("material/message.txt", "r") as your_file:
     print("your_content:", your_content)
 
 print("Done")
+
+
+print("===== Package Manager & External Package =====")
+# External packages list - https://pypi.org
+# Python Package manager --> pip pipenv
+
+
+with Image.open("material/image.png") as img_obj:
+    resized_img = img_obj.resize((300, 300))
+    resized_img.show()
+    resized_img.save("material/newImg.png")
