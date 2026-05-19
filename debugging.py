@@ -45,3 +45,18 @@ with Image.open("material/image.png") as img_obj:
     resized_img = img_obj.resize((300, 300))
     resized_img.show()
     resized_img.save("material/newImg.png")
+
+
+print("===== Debugging =====")
+
+
+def get_summary(*args):
+    total_amount = 0
+    for a in args:
+        total_amount += a
+        return total_amount  # Bug found in  debugging
+
+
+test = 100
+result = get_summary(1, 6, 4, 9, 10)
+print(result)
