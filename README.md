@@ -35,3 +35,15 @@ git pull origin master
 - Array
 - Comprehension
 - Debugging
+
+## PIP commands:
+```
+macOs pip3
+
+pip list
+pip install pillow or smth else 
+pip uninstall pillow or smth else
+pip show pillow or smth else
+pip freeze > requirments.txt
+
+```
